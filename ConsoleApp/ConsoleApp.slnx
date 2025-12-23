@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="../ExcelReader.Application/ExcelReader.Application.csproj" Id="8925753a-226c-4471-a1bd-ed557c4e3b5b" />
+  <Project Path="../ExcelReader.Domain/ExcelReader.Domain.csproj" Id="05bf8326-63ad-43e5-8b70-3f75593cd13d" />
+  <Project Path="../ExcelReader.Infrasturcture/ExcelReader.Infrasturcture.csproj" Id="3e44767e-c374-4e67-a845-171bc23dcd6d" />
+  <Project Path="ExcelReader.Client.csproj" />
+</Solution>
