@@ -5,6 +5,9 @@ This project is built for learning purposes using clean architecture principles.
 
 ---
 
+![Demo](assets/Animation.gif)
+
+
 ## 🚀 Features
 
 - ➕ Add new students
@@ -23,6 +26,4 @@ This project is built for learning purposes using clean architecture principles.
 - Layered Architecture (Domain, Application, Client)
 
 ---
-
-## 📁 Project Structure
 
