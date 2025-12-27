@@ -145,15 +145,12 @@ namespace ExcelReader.Application.Services
 
         private DateTime ParseExcelDate(ExcelRange cell)
         {
-            // 1️⃣ Agar Excel ichida Date bo‘lsa
             if (cell.Value is DateTime dt)
                 return dt;
 
-            // 2️⃣ Agar Excel numeric (OADate) bo‘lsa
             if (cell.Value is double oa)
                 return DateTime.FromOADate(oa);
 
-            // 3️⃣ Agar TEXT bo‘lsa
             var text = cell.Text?.Trim();
 
             string[] formats =
