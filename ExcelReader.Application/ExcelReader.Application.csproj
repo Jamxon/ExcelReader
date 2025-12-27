@@ -11,4 +11,8 @@
     <ProjectReference Include="..\ExcelReader.Infrasturcture\ExcelReader.Infrasturcture.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Assets\" />
+  </ItemGroup>
+
 </Project>

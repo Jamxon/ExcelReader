@@ -1,7 +1,8 @@
-﻿using System;
-using System.Diagnostics.Metrics;
-using ExcelReader.Application.Services;
+﻿using ExcelReader.Application.Services;
 using ExcelReader.Domain.Models;
+using OfficeOpenXml;
+using System;
+using System.Diagnostics.Metrics;
 
 namespace ExcelReader.Client
 {
@@ -13,7 +14,7 @@ namespace ExcelReader.Client
         static void Main(string[] args)
         {
             int counter = 0;
-            while (counter < 3)
+            while (counter < 5)
             {
                 counter++;
                 Console.Clear();
@@ -28,6 +29,7 @@ namespace ExcelReader.Client
                 Console.WriteLine("7. Code bo'yicha qidirish");
                 Console.WriteLine("8. Ism bo'yicha qidirish");
                 Console.WriteLine("9. Talaba o‘chirish");
+                Console.WriteLine("10. Excel Read");
                 Console.WriteLine("0. Chiqish");
 
                 Console.Write("\nTanlang: ");
@@ -44,6 +46,7 @@ namespace ExcelReader.Client
                     case "7": SearchStudentByCode(); break;
                     case "8": SearchStudentByName(); break;
                     case "9": DeleteStudent(); break;
+                    case "10": ExcelRead(); break;
                     case "0": return;
                 }
             }
@@ -279,6 +282,29 @@ namespace ExcelReader.Client
             attendances[index].WaitingMinutes = int.Parse(Console.ReadLine() ?? "0");
 
             Success("Attendance yangilandi!");
+        }
+        static void ExcelRead()
+        {
+            Console.Clear();
+            DrawHeader("EXCEL IMPORT");
+
+            string path = @"C:\Users\ThinkPad\Desktop\ExcelReader\assets\fixed_attendance.xlsx";
+
+            var externalList = attendanceService
+                .ReadExcelToExternalAttendance(path);
+
+            Console.WriteLine($"Exceldan o‘qildi: {externalList.Count}");
+
+            var filtered = attendanceService
+                .FilterExternalAttendance(externalList);
+
+            Console.WriteLine($"Filterdan o‘tdi: {filtered.Count}");
+
+            var students = studentService.GetStudent();
+
+            attendanceService.ImportToAttendance(filtered, students);
+
+            Success("Attendance muvaffaqiyatli import qilindi!");
         }
 
         static void DrawHeader(string text)
