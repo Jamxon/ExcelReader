@@ -11,7 +11,7 @@ namespace ExcelReader.Domain.Models
         public DateTime EnterDate { get; set; }
         public DateTime ExitDate { get; set; }
         public int Duration { get; set; }
-        public string IsHost { get; set; }
+        public string IsGuest { get; set; }
         public string IsWaiting { get; set; }
     }
 }

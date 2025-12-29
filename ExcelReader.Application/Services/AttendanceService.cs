@@ -38,7 +38,7 @@ namespace ExcelReader.Application.Services
                         EnterDate = ParseExcelDate(worksheet.Cells[row, 3]),
                         ExitDate = ParseExcelDate(worksheet.Cells[row, 4]),
                         Duration = int.Parse(worksheet.Cells[row, 5].Text),
-                        IsHost = worksheet.Cells[row, 6].Text,
+                        IsGuest = worksheet.Cells[row, 6].Text,
                         IsWaiting = worksheet.Cells[row, 7].Text
                     });
                 }
@@ -52,7 +52,7 @@ namespace ExcelReader.Application.Services
         {
             return list
                 .Where(x =>
-                    x.IsHost == "Да" &&
+                    x.IsGuest == "Да" &&
                     x.Duration > 0
                 )
                 .ToList();
