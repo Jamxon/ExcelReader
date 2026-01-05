@@ -29,7 +29,7 @@ namespace ExcelReader.Client
                 Console.WriteLine("7. Code bo'yicha qidirish");
                 Console.WriteLine("8. Ism bo'yicha qidirish");
                 Console.WriteLine("9. Talaba o‘chirish");
-                Console.WriteLine("10. Excel Read");
+                Console.WriteLine("10. Exceldan o'qish");
                 Console.WriteLine("0. Chiqish");
 
                 Console.Write("\nTanlang: ");
