@@ -1,29 +1,12 @@
-# 📚 ExcelReader – Student Attendance Console App
+# Student Attendance System (Console App)
 
-A simple **C# Console Application** to manage students and their attendance.
-This project is built for learning purposes using clean architecture principles.
+Bu loyiha C# Console Application bo‘lib, talabalar va ularning attendance ma’lumotlarini boshqarish uchun mo‘ljallangan.
 
----
+## Imkoniyatlar
+- Talaba qo‘shish, tahrirlash, o‘chirish
+- Code va ism bo‘yicha qidirish
+- Attendance belgilash va yangilash
+- Attendance ro‘yxatini ko‘rish
+- Excel fayldan attendance import qilish (EPPlus)
 
 ![Demo](assets/Animation.gif)
-
-
-## 🚀 Features
-
-- ➕ Add new students
-- 📋 View students list
-- ⏱ Mark attendance
-- ✏️ Update attendance
-- 📊 View attendance records
-
----
-
-## 🛠 Technologies
-
-- C#
-- .NET Console Application
-- In-Memory DBContext
-- Layered Architecture (Domain, Application, Client)
-
----
-
