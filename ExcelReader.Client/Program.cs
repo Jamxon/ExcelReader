@@ -1,4 +1,5 @@
-﻿using ExcelReader.Application.Services;
+﻿using ExcelReader.Application.Services.StudentServices;
+using ExcelReader.Application.Services.AttendanceServices;
 using ExcelReader.Domain.Models;
 using OfficeOpenXml;
 using System;
@@ -14,7 +15,7 @@ namespace ExcelReader.Client
         static void Main(string[] args)
         {
             int counter = 0;
-            while (counter < 5)
+            while (counter < 10)
             {
                 counter++;
                 Console.Clear();

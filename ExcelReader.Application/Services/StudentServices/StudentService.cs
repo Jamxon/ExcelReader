@@ -4,9 +4,9 @@ using System.Text;
 using ExcelReader.Infrasturcture.Data;
 using ExcelReader.Domain.Models;
 
-namespace ExcelReader.Application.Services
+namespace ExcelReader.Application.Services.StudentServices
 {
-    public class StudentService
+    public class StudentService : IStudentService
     {
         public DBContext DBContext { get; set; }
 

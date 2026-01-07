@@ -3,9 +3,9 @@ using ExcelReader.Infrasturcture.Data;
 using OfficeOpenXml;
 using System.Globalization;
 
-namespace ExcelReader.Application.Services
+namespace ExcelReader.Application.Services.AttendanceServices
 {
-    public class AttendanceService
+    public class AttendanceService : IAttendanceService
     {
         public DBContext DBContext { get; set; }
 
